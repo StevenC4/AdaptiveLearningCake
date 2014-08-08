@@ -9,6 +9,14 @@ if (!Configure::read('debug')):
 	throw new NotFoundException();
 endif;
 
+$this->start("css");
+echo $this->Html->css(array('cake.generic'));
+$this->end();
+
+$this->start("title");
+echo "CakePHP: the rapid development php framework";
+$this->end();
+
 App::uses('Debugger', 'Utility');
 ?>
 <h2><?php echo __d('cake_dev', 'Release Notes for CakePHP %s.', Configure::version()); ?></h2>
