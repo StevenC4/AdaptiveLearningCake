@@ -27,6 +27,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 
+        echo $this->Html->css('style');
+
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
@@ -35,7 +37,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($this->fetch('title'), 'http://cakephp.org'); ?></h1>
+            <ul>
+                <li<?= ($this->params['controller'] == 'home' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/">SwitchLearn</a></li>
+                <li<?= ($this->params['controller'] == 'learn' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/learn/">Learn</a></li>
+                <li<?= ($this->params['controller'] == 'create' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/create/">Create</a></li>
+                <li<?= ($this->params['controller'] == 'donate' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/donate/">Donate</a></li>
+                <li<?= ($this->params['controller'] == 'feedback' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/feedback/">Feedback</a></li>
+            </ul>
 		</div>
 		<div id="content">
 
