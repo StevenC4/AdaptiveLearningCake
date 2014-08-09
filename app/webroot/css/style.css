@@ -6,7 +6,7 @@ div#header ul li:hover {background-color: #43438C; opacity: 0.80;}
 div#header ul li a {display: inline-block; text-decoration: none; color: white; padding: 5px 10px;}*/
 
 div#header { float: right; width: 100%; position: absolute; overflow: visible; z-index: 99999; /*border-bottom: solid 2px #43438C;*/}
-div#header ul { list-style-type: none; height: 35px; margin: 0; padding: 15px 0 10px; text-align: center; position: relative; top: -15px;}
+div#header ul { list-style-type: none; height: auto; margin: 0 0 10px; padding: 0; text-align: center; position: relative;}
 div#header ul li { display: inline-block; height: 45px; border-bottom: 4px solid #484854; margin: -2px; height: auto; position: relative;}
 /*div#header ul li:hover { background-color: #43438C;}*/
 div#header ul li a { text-decoration: none; color: #ffffff; font-size: 18px; padding: 20px 20px 20px; display: block; position: relative;}
