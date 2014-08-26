@@ -37,20 +37,40 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-            <ul>
-                <li<?= ($this->params['controller'] == 'home' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/">SwitchLearn</a></li>
-                <li<?= ($this->params['controller'] == 'learn' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/learn/">Learn</a></li>
-                <li<?= ($this->params['controller'] == 'create' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/create/">Create</a></li>
-                <li<?= ($this->params['controller'] == 'donate' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/donate/">Donate</a></li>
-                <li<?= ($this->params['controller'] == 'feedback' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/feedback/">Feedback</a></li>
-            </ul>
+            <div id="menu-container">
+                <ul>
+                    <li<?= ($this->params['controller'] == 'home' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/">SwitchLearn</a></li>
+                    <li<?= ($this->params['controller'] == 'learn' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/learn/">Learn</a></li>
+                    <li<?= ($this->params['controller'] == 'create' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/create/">Create</a></li>
+                    <li<?= ($this->params['controller'] == 'donate' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/donate/">Donate</a></li>
+                    <li<?= ($this->params['controller'] == 'feedback' ? ' class="selected"' : '') ?>><a href="/adaptive-learning/feedback/">Feedback</a></li>
+                    <li><a href="javascript:showLoginDiv();">Login</a></li>
+                </ul>
+            </div>
+
 		</div>
 		<div id="content">
-
 			<?php echo $this->Session->flash(); ?>
-
 			<?php echo $this->fetch('content'); ?>
 		</div>
+        <div class="modal-overlay"></div>
+        <div class="modal login">
+            <div class="modal header">
+                <h3>Login</h3>
+            </div>
+            <div class="modal body">
+                <table>
+                    <tr>
+                        <td><label>Username: </label></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Password: </label></td>
+                        <td><input type="password"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
 		<div id="footer">
 
 		</div>
