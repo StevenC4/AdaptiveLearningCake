@@ -1,27 +1,33 @@
-body {margin: 0; background-color: #111122; color: white; }
+body {margin: 0; background-color: #111122; color: white; position: relative; }
 
 /* Header Toolbar */
-div#header div#menu-container { float: right; width: 100%; position: absolute; overflow: hidden; z-index: 99999;}
-div#header div#menu-container ul { list-style-type: none; height: auto; margin: 0 0 10px; padding: 0; text-align: center; position: relative;}
-div#header div#menu-container ul li { display: inline-block; height: 45px; border-bottom: 4px solid #484854; margin: -2px; height: auto; position: relative;}
-div#header div#menu-container ul li a { text-decoration: none; color: #ffffff; font-size: 18px; padding: 20px 20px 20px; display: block; position: relative;}
-div#header div#menu-container ul li a:hover { background-color: #43438C;}
-div#header div#menu-container ul li.selected { border-bottom: 6px solid red;}
-div#header div#menu-container ul li.selected a { padding-bottom: 19px;}
+div#header {position: relative; display: inline-block; float: left; width: 100%; font-family: sans-serif;}
+div#header div#menu-container { float: right; width: 100%; overflow: hidden; z-index: 99999;}
+div#header div#menu-container ul { list-style-type: none; margin: 0 0 0.625em; padding: 0; text-align: center;}
+div#header div#menu-container ul li { display: inline-block; border-bottom: 0.25em solid #484854; margin: -0.16em; height: auto; font-size: 1em;}
+div#header div#menu-container ul li a { text-decoration: none; color: #ffffff; font-size: 1.125em; padding: 1.25em 1.25em 1.25em; display: block;}
+div#header div#menu-container ul li:not(.search) a:hover { background-color: #43438C;}
+div#header div#menu-container ul li.selected { border-bottom: 0.375em solid #6084f0;}
+div#header div#menu-container ul li.selected a { padding-bottom: 1em;}
+div#header div#menu-container ul li a { padding-bottom: 19px;}
+div#header div#menu-container ul li.search a { display: inline;}
+div#header div#menu-container ul li.search { padding-bottom: 1em !important;}
+div#header div#menu-container ul li.search input { display: inline; width: 15em; margin: 0 0.5em 0.2em 0.6em;}
+div#header div#menu-container ul li.search div {
+    position: relative; display: inline-block; width: 1.65em; height: 1.65em; border-radius: 0.188em;
+    background-color: #bbbbbb;  cursor: pointer; top: 0.1em; margin-right: 0.6em;}
+div#header div#menu-container ul li.search div img {position: relative; top: 0.19em;}
+div#header div#menu-container ul li.search:hover,
+div#header div#menu-container ul li.search.selected { padding-top: 0.938em; background-color: #43438C;}
+div#header div#menu-container ul li.search { padding: 0.875em 1.125em 1em 1.125em;}
 
 /* Header elements */
-div#header { position: absolute; width: 100%; height: auto;}
-div#header h1 { position: absolute; text-align: center; margin: 30px 0;}
+div#title { position: relative; width: 100%; height: auto; display: inline-block;}
+div#title h1 { font-weight: normal; text-align: center; font-size: 3.8em; margin: 0.5em 0 0.6em; font-family: Copperplate Gothic Light;}
 
-/* Login */
-div#header div#login-container {position: relative; float: right;}
-div#header div#login-container { display: block;}
-div#header div#login-container div.button a { float: right; text-decoration: none; color: #ffffff; font-size: 18px; padding: 20px 20px 20px; display: block; position: relative;}
-div#header div#login-container div.button a:hover { background-color: #43438C;}
-div#header div#login-container div.drop-down {position: relative; float: right;}
+div#courseSearch { text-align: center;}
+div#courseSearch input { display: inline; border-style: none; border-radius: 0.45em; width: 17em; padding-left: .5em; height: 1.25em; font-size: 1.5em; margin-right: 0.5em;}
+div#courseSearch div { display: inline-block; width: 1.875em; height: 1.875em; background-color: #bbbbbb; position: relative; border-radius: 0.3em; top: -0.1em; cursor: pointer;}
+div#courseSearch div img { position: relative; top: 0.3em;}
 
 .hidden {display: none;}
-
-div.modal-overlay {position: absolute; width: 100%; height: 100%; background-color: grey; opacity: 0.35; z-index: 999999; display: none;}
-
-div.modal {background-color: white; color: black; display: block; width: auto; position: absolute; left: 50%; top: 50%;}
